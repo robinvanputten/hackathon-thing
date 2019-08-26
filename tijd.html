@@ -1,0 +1,59 @@
+<DOCTYPE! html>
+<html>
+    <head>
+        <title> Handige contacten </title>
+    </head>
+    <body>
+        <button style="width: 200px; height: 50px;" onclick="start()">start</button>
+        <button style="width: 200px; height: 50px;" onclick="stop()">stop</button><br>
+    <div id="demo"></div>
+    </body>
+<script>
+    function currentTime(){
+        var today = new Date();
+        var hour = today.getHours();
+        if (hour.toString().length === 1){
+            hour = "0" + hour;
+        }
+        var minute = today.getMinutes();
+        if (minute.toString().length === 1){
+            minute = "0" + minute;
+        }
+        var second = today.getSeconds();
+        if (second.toString().length === 1){
+            second = "0" + second;
+        }
+        var startTime = hour + ":" + minute + ":" + second;
+        var stopTime = startTime.replace(/:/g, "");
+        return stopTime;
+    }
+
+    function start(){
+        var str = currentTime();
+        splitTijd = str.split("");
+        document.getElementById('demo').innerHTML = splitTijd[0] + splitTijd[1] + ":" + splitTijd[2] + splitTijd[3] + ":" + splitTijd[4] + splitTijd[5];
+    }
+
+    function stop(){
+        var start = document.getElementById('demo').innerHTML.replace(/:/g, "");
+        var startTime = parseInt(start);
+        var stop = currentTime();
+        var stopTime = parseInt(stop);
+        var eindTijd = stopTime - startTime;
+        while (eindTijd.length !== 6){
+            eindTijd = "0" + eindTijd;
+        }
+        splitTijd = eindTijd.split("");
+        if (splitTijd[4] === "6"){
+            splitTijd[3] = parseInt(splitTijd[3]) + 1;
+            splitTijd[4] = "0";
+        } else if (splitTijd[2] === "6"){
+            splitTijd[1] = parseInt(splitTijd[1]) + 1;
+            splitTijd[2] = "0";
+        }
+        eind = splitTijd[0] + splitTijd[1] + ":" + splitTijd[2] + splitTijd[3] + ":" + splitTijd[4] + splitTijd[5];
+        console.log(eind);
+    }
+
+</script>
+</html>
