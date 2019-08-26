@@ -20,12 +20,6 @@ body {
     font-size: 5vw;
 }
 
-.timer {
-    width: 15vw;
-    height: 5vw;
-    border: 1px solid black;
-    margin-top: 2vw;
-}
 
 .startBtn {
     width: 6vw;
@@ -51,20 +45,22 @@ body {
     padding-top: 2vw;
     height: 3vw;
     background-color: white;
+    width: 15vw;
+    height: 5vw;
+    
 }
 
 .columns {
     display: flex;
     background-color: #e6e6e6;
-    /*    border: 1px solid black;*/
 }
 
 .naam,
 .puzzel,
 .tijdweergave {
-    /*    border: 1px solid black;*/
     width: 25%;
-    height: 40vw;
+    min-height: 37vw;
+    height: auto;
     margin-left: 1vw;
     margin-top: 4vw;
     background-color: #f7fffd;
@@ -87,6 +83,7 @@ body {
 
 header {
     border: 1px solid #e6e6e6;
+    background-color: #e6e6e6;
     ;
 }
 

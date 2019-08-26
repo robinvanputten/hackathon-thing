@@ -6,11 +6,17 @@
     <script src="https://kit.fontawesome.com/0d122c6481.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/gen-light" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="nodb/script.js"></script>
+
 </head>
 
 <body>
     <header>
-        <button class="addBtn" onclick=""><i class="fas fa-plus-circle plus"></i></button>
+        <button data-toggle="modal" data-target="#myModal" class="addBtn"><i class="fas fa-plus-circle plus"></i></button>
         <button class="startBtn"><i class="far fa-play-circle play"></i></button>
         <div class="timer">Timer</div>
     </header>
@@ -18,9 +24,13 @@
         <div class="columns">
             <div class="naam">
                 <h2>Naam</h2>
+
+                <div id="naam_table"></div>
+
             </div>
             <div class="puzzel">
                 <h2>puzzel</h2>
+                <div id="puzzle_table"></div>
             </div>
             <div class="tijdweergave">
                 <h2>tijdweergave</h2>
@@ -28,4 +38,24 @@
 
         </div>
     </main>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add puzzle</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Puzzle Name</p>
+                    <input id="puzzle"></input>
+                    <p>Names Of Students (seperated by comma)</p>
+                    <textarea class="form-control" rows="5" id="names"></textarea>
+                    <p></p>
+                    <button type="button" class="btn btn-primary" onclick="addNames()">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </body></html>
