@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'GenLight';
+    font-weight: normal;
+    font-style: normal;
+    background-color: #e6e6e6;
+}
+
+.addBtn {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.plus {
+    font-size: 5vw;
+}
+
+.timer {
+    width: 15vw;
+    height: 5vw;
+    border: 1px solid black;
+    margin-top: 2vw;
+}
+
+.startBtn {
+    width: 6vw;
+    height: 5vw;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.play {
+    font-size: 4vw;
+}
+
+.timer,
+.startBtn {
+    float: right;
+    margin-top: 2.3vw;
+    margin-right: 3vw;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.timer {
+    padding-top: 2vw;
+    height: 3vw;
+    background-color: white;
+}
+
+.columns {
+    display: flex;
+    background-color: #e6e6e6;
+    /*    border: 1px solid black;*/
+}
+
+.naam,
+.puzzel,
+.tijdweergave {
+    /*    border: 1px solid black;*/
+    width: 25%;
+    height: 40vw;
+    margin-left: 1vw;
+    margin-top: 4vw;
+    background-color: #f7fffd;
+}
+
+.tijdweergave {
+    width: 50%;
+    margin-right: 2vw;
+}
+
+.naam,
+.puzzel,
+.tijdweergave {
+    font-size: 2vw;
+    text-align: center;
+    border-bottom: 1px solid;
+    border-bottom-color: #e6e6e6;
+    border-radius: 20px;
+}
+
+header {
+    border: 1px solid #e6e6e6;
+    ;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1vw;
+    border-bottom: 6px solid #e6e6e6;
+    ;
+}
